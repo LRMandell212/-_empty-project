@@ -1,0 +1,192 @@
+/*
+Project Name: Wyzant Examples - New Project Setup
+Author: Lee Mandell
+email: lrm.wyzant@gmail.com
+*/
+
+/*
+Table of Contents
+  =01 Reset/Global Defaults
+  =02 Typography
+  =03 Nav
+  =04 Layout
+    =PAGE SPECIFIC STYLES
+      =e.g. HOME page
+*/
+
+/***** =01 Reset/Global Defaults *****/
+/*
+  see also:
+  Eric Meyer's reset: https://meyerweb.com/eric/tools/css/reset/
+  normalize.css - https://necolas.github.io/normalize.css/
+  https://scotch.io/tutorials/a-look-at-bootstrap-4s-new-reset-rebootcss
+  https://github.com/twbs/bootstrap/blob/v4-dev/dist/css/bootstrap-reboot.css
+	This one is based on:https://hankchizljaw.com/wrote/a-modern-css-reset/
+*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+	padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+/* Added h5 and h6 for completeness  */
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+	list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+	display: block;
+	width: 100%;
+	/* Changed from max-wdith */
+	height: auto;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		transition-duration: 0.01ms !important;
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+
+		scroll-behavior: auto !important;
+	}
+}
+
+/* end of Andy Bell modern reset */
+
+p,
+ul,
+ol {
+	margin-bottom: 1em;
+}
+
+/* Helper classes */
+
+/* From: Lea Verou - https://twitter.com/LeaVerou/status/1045768279753666562
+		Gets rid of the annoying outline for mouse users but preserves it for keyboard users,
+		and is ignored by browsers that don’t support :focus-visible.
+*/
+:focus:not(:focus-visible) {
+	outline: none
+}
+
+.me-hide {
+	display: none;
+}
+
+.no-css {
+	display: none;
+}
+
+
+/***** =02 Typography *****/
+
+html {
+	overflow-y: scroll;
+	color: hsl(0, 0%, 13%);
+	font-size: 100%;
+	font-family: sans-serif;
+	line-height: 1.2;
+}
+
+body {
+	font-weight: 400;
+	font-size: 1rem;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 0.5em;
+	font-weight: bold;
+}
+
+/* From Adam Argyle - https://twitter.com/argyleink/status/1316143837903896577 */
+:is(h1, h2, h3, h4, h5, h6).tight {
+	margin-block: 0;
+}
+
+a {
+	color: blue;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/***** =03 Navigation *****/
+
+/***** =04 Layout *****/
+
+body {
+	padding: 1em 4vw;
+}
+
+.page-header {
+	margin-bottom: 2em;
+	padding-top: 1em;
+	text-align: center;
+}
+
+.page-footer {
+	margin-top: 1em;
+	text-align: center;
+}
